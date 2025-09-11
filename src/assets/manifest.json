@@ -1,0 +1,33 @@
+{
+  "name": "Drivoxe carsharing",
+  "short_name": "Drivoxe",
+  "description": "Веб-приложение позволяющее пользователям арендовать и заказывать автомобилей",
+  "lang": "ru",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "orientation": "any",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "img/favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg",
+      "purpose": "maskable"
+    }
+  ]
+}

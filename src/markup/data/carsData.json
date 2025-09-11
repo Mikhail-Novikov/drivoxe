@@ -1,0 +1,39 @@
+[
+  {
+    "imageSrc": "img/cars/Lamborghini.png",
+    "badge": "Популярный",
+    "title": "Lamborghini Huracan",
+    "specs": ["V10", "610 л.с.", "AWD"],
+    "priceValue": "29,500"
+  },
+  {
+    "imageSrc": "img/cars/Ferrari.jpg",
+    "title": "Ferrari 488 GTB",
+    "specs": ["V8", "670 л.с.", "RWD"],
+    "priceValue": "31,000"
+  },
+  {
+    "imageSrc": "img/cars/McLaren.png",
+    "title": "McLaren 720S",
+    "specs": ["V8", "720 л.с.", "RWD"],
+    "priceValue": "65,500"
+  },
+  {
+    "imageSrc": "img/cars/Audi_R8.png",
+    "title": "Audi R8",
+    "specs": ["V10", "600 л.с.", "RWD"],
+    "priceValue": "20,400"
+  },
+  {
+    "imageSrc": "img/cars/Bentley.webp",
+    "title": "Bentley Flying-Spur W12 First-Edition",
+    "specs": ["V12", "610 л.с.", "AWD"],
+    "priceValue": "68,500"
+  },
+  {
+    "imageSrc": "img/cars/Bugatti.png",
+    "title": "Bugatti Chiron Super Sport 300+",
+    "specs": ["V16", "700 л.с.", "AWD"],
+    "priceValue": "44,000"
+  }
+]
