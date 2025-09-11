@@ -1,0 +1,18 @@
+section.booking#booking
+  .booking__container
+    .booking__content
+      h2.booking__title Готовы к&nbsp;незабываемому опыту?
+      p.booking__description
+        | Забронируйте автомобиль мечты прямо сейчас и&nbsp;получите скидку&nbsp;10% на&nbsp;первую аренду
+      form.booking__form(data-js-form)
+        .booking__form-row
+          input.booking__input(type='text' placeholder='Ваше имя' required='' id="name")
+          input.booking__input(type='tel' placeholder='Телефон +7 (xxx) xxx-xx-xx' required='' id="phone" data-js-input-mask="+7 (000) 000-00-00")
+        .booking__form-row
+          input.booking__input(type='date' required='' id="date")
+          select.booking__select(required='', id='select' default="Ваше")
+            option(value='notSelect' selected disabled hidden) Выберите
+            each item in jsonData.carsData
+              option(value=item.title)= item.title
+        button.booking__submit.button(type='submit' data-js-button id="submit")
+          | Забронировать со скидкой

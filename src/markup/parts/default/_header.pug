@@ -1,0 +1,13 @@
+header.header(role="banner")
+  .header__container
+    .header__logo
+      a.header__logo-text(title="drivox логотип" aria-label="Главная страница")
+        img(src="img/drivox-logo.svg", width="150" height="24" alt="DRIVOX аренда автомобилей" t)
+    nav.header__nav(aria-label="Главное навигационное меню сайта")
+      ul.header__nav-list(role="menubar")
+        li.header__nav-item(role="none presentation")
+          a.header__nav-link(href='#cars' role="menuitem") НАШ АВТОПАРК
+        li.header__nav-item(role="none presentation")
+          a.header__nav-link(href='#booking' role="menuitem") ЗАБРОНИРОВАТЬ
+    .header__contact
+      a.header__phone(href='tel:+971523898989' aria-label="Позвонить нам по телефону") #{phone}

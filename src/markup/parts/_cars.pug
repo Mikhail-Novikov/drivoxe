@@ -1,0 +1,19 @@
+section.cars#cars
+  .cars__container
+    h2.cars__title Наш автопарк
+    .cars__grid
+      each car in jsonData.carsData
+        article.car-card
+          .car-card__image-wrapper
+            img.car-card__image(src=car.imageSrc alt=car.title)
+            if car.badge
+              .car-card__badge= car.badge
+          .car-card__content
+            div.car-card__description
+              h3.car-card__title= car.title
+              p.car-card__specs= car.specs.join(' • ')
+              .car-card__price
+                span.car-card__price-value= car.priceValue + ' руб.'
+                span.car-card__price-period / день
+            button.car-card__button.button.button--secondary(data-js-button)= 'Забронировать'
+
