@@ -57,7 +57,7 @@ webpack/              # Файлы конфигурации для сборщи�
 ### Шаг 1: Клонирование репозитория
 
 ```bash
-git clone https://github.com/username/project.git
+git clone https://github.com/Mikhail-Novikov/drivoxe.git
 ```
 
 ### Шаг 2: Установка зависимостей
