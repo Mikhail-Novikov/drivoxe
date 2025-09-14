@@ -1,13 +1,13 @@
-import Base from '@/components/Base'
+import IBase from '@/components/Base'
 import { $, type JQuery } from '@/utils/JQuery'
 import { Selectors } from './types'
 
 /** Компонент кнопки с эффектом вспышки */
-export default class Button extends Base {
+export default class Button extends IBase {
   private buttonsElements: JQuery[] = [];
 
   private readonly selectors: Selectors = {
-    button: '[data-js-button]',
+    button: '[data-js-button-animated]',
   }
 
   protected init() {
@@ -20,7 +20,7 @@ export default class Button extends Base {
    * @description
    *   Конструктор класса.
    *   Инициализирует properties, ищет все кнопки на странице
-   *   с атрибутом data-js-button, инициализирует кнопки, и
+   *   с атрибутом data-js-button-animated, инициализирует кнопки, и
    *   привязывает обработчик события клика.
    */
   constructor() {
@@ -44,6 +44,7 @@ export default class Button extends Base {
   protected bindEvents(): void {
     this.buttonsElements.forEach(element => {
       element.on('click', (event: Event): void => {
+        // event.preventDefault()
         const mouseEvent = event as MouseEvent
         const target = mouseEvent.target as HTMLElement
         this.rippleEffect(mouseEvent, target)

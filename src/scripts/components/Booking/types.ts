@@ -4,5 +4,5 @@ export type Selectors = {
   carSelect: string
   form: string
   inputDate: string
-  submitButton: string
+  carsContainer: string
 }

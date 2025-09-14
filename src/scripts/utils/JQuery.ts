@@ -68,10 +68,25 @@ export class JQuery {
     return this
   }
 
+  /**
+   * Устанавливает значение атрибута с заданным квалифицированным именем.
+   * @param {string} qualifiedName - квалифицированный имя атрибута.
+   * @param {string} value - значение атрибута.
+   * @returns {JQuery} - объект JQuery.
+   */
   public attr(qualifiedName: string, value: string): JQuery {
     this.rootElement.setAttribute(qualifiedName, value)
 
     return this
+  }
+
+  /**
+    * Возвращает значение атрибута данных с заданным ключом.
+   * @param {string} key - ключ атрибута данных.
+   * @returns {string | null} Значение атрибута данных или null, если он не существует.
+   */
+  public data(key: string): string | null {
+    return this.rootElement.getAttribute(`data-${key}`);
   }
 
   public focus(): JQuery {
@@ -112,6 +127,27 @@ export class JQuery {
       default:
         throw new Error('Невозможно извлечь значение для данного элемента.');
     }
+  }
+  /**
+   * Установка значения для поля ввода или выпадающего списка.
+   *
+   * @param {string} value - значение которое будет установлено
+   * @returns {JQuery} - объект JQuery
+   * @throws {Error} - если элемент не является полем ввода или выпадающим списком
+   */
+  public setValue(value: string): JQuery {
+    switch (this.rootElement.tagName.toLowerCase()) {
+      case 'input':
+      case 'textarea':
+        (this.rootElement as HTMLInputElement).value = String(value); // Преобразование к строке
+        break;
+      case 'select':
+        (this.rootElement as HTMLSelectElement).value = String(value); // Установка выбранного значения
+        break;
+      default:
+        throw new Error('Невозможно установить значение для данного элемента.');
+    }
+    return this;
   }
 
   public clear(): JQuery {

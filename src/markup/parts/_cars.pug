@@ -3,7 +3,7 @@ section.cars#cars
     h2.cars__title Наш автопарк
     .cars__grid
       each car in jsonData.carsData
-        article.car-card
+        article.car-card(data-car-name= car.title)
           .car-card__image-wrapper
             img.car-card__image(src=car.imageSrc alt=car.title)
             if car.badge
@@ -15,5 +15,5 @@ section.cars#cars
               .car-card__price
                 span.car-card__price-value= car.priceValue + ' руб.'
                 span.car-card__price-period / день
-            button.car-card__button.button.button--secondary(data-js-button)= 'Забронировать'
+            button.car-card__button.button.button--secondary(data-js-button-animated)= 'Забронировать'
 
